@@ -7,7 +7,12 @@ note
 Installation
 ===
 
-You can download the latest verions of `note` (via this repository) and you can then source the `note.sh` file in your bash profile. You can see an example of how I did it in my [dotfiles](https://github.com/mattmezza/dotfiles).
+You can download the latest verions of `note` (via this repository) and you can then source the `note.sh` file in your bash profile. You can see an example of how I did it in my [dotfiles](https://github.com/mattmezza/dotfiles) (see plugins.sh and plugins.txt).
+
+
+```bash
+git clone --branch 1.0.0 git@github.com/mattmezza/note.git note && source note/note.sh
+```
 
 `note` should be compatible with any *nix OS but it has been tested with macOS Catalina (and the prev version).
 
