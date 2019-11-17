@@ -5,14 +5,14 @@ function note() {
 	fi
 
 	case "$1" in
-		list)
+		list|l)
 			ls -1 $NOTE_DIR/*.txt
 			;;
-		new)
+		new|n)
 			FILE_NAME="$(date +%Y%m%d%H%M)-$(echo $2 | sed 's/ /_/g')"
 			$VISUAL "$NOTE_DIR/$FILE_NAME.txt"
 			;;
-		open)
+		open|o)
 			case "$2" in
 				last)
 					$VISUAL $(note last)
@@ -22,7 +22,7 @@ function note() {
 					;;
 			esac
 			;;
-		path)
+		path|p)
 			echo "$NOTE_DIR/$2"
 			;;
 		rm)
@@ -39,13 +39,15 @@ function note() {
 			echo $(note list | tail -n 1)
 			;;
 		help)
-			echo "Here's what you can do with `$0`:\n"
-			echo "$ $0 list"
-			echo "$ $0 new name"
-			echo "$ $0 open name"
-			echo "$ $0 path name"
-			echo "$ $0 rm name"
-			echo "\nYour scratch notes dir is: $NOTE_DIR"
+			echo "Usage:"
+			echo "  $ $0 list|l"
+			echo "  $ $0 new|n name"
+			echo "  $ $0 open|o name"
+			echo "  $ $0 path|p"
+			echo "  $ $0 path|p name"
+			echo "  $ $0 rm name"
+			echo "  $ $0 last"
+			echo "Your scratch notes dir is: '$NOTE_DIR'"
 			;;
 		*)
 			echo "Missing command.\n$ $0 help"

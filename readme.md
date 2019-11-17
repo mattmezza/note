@@ -16,16 +16,17 @@ Usage
 ===
 
 `note` uses a default directory as database. This directory defaults to `$HOME/notes` but can be changed by altering the environment variable `NOTE_DEFAULT_SCRATCH_DIR`.
+
 ```
-$ note help:
-
-$ note list
-$ note new name
-$ note open name
-$ note path name
-$ note rm name
-
-Your scratch notes dir is: /Users/matt/notes
+Usage:
+  $ note list|l
+  $ note new|n name
+  $ note open|o name
+  $ note path|p
+  $ note path|p name
+  $ note rm name
+  $ note last
+Your scratch notes dir is: '/Users/matt/klm/notes'
 ```
 
 #### note list
@@ -48,13 +49,18 @@ Prints back to the stdout the path of the directory used as a database for all t
 
 Prints back to the stdout the full path of a note that you already took. The name must be matching with the actual filename (including the datetime part and the file extension).
 
-##### note path last
+#### note last
 
 Prints back to the stdout the full path of the last note that you already took. You can use this command in combination with `note open $(note path last)` or `note rm $(note path last)` to quickly edit or remove the most recent note.
 
 #### note rm name
 
 Prompts you to remove the note identified by the name. The name must be matching with the actual filename (including the datetime part and the file extension).
+
+#### note last
+
+Prints back to the stdout the full path of the last note that you already took. You can use this command in combination with `note open $(note last)` or `note rm $(note last)` to quickly edit or remove the most recent note.
+
 
 Development
 ===
