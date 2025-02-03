@@ -11,7 +11,7 @@ You can download the latest verions of `note` (via this repository) and you can 
 
 
 ```bash
-git clone --branch 1.0.0 git@github.com/mattmezza/note.git note && source note/note.sh
+git clone --branch 1.1.0 git@github.com/mattmezza/note.git note && source note/note.sh
 ```
 
 `note` should be compatible with any *nix OS but it has been tested with macOS Catalina (and the prev version).
